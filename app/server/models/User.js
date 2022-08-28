@@ -34,7 +34,14 @@ var profile = {
   graduationYear: {
     type: String,
     enum: {
-      values: '2022 2023 2024 2025 2026'.split(' '),
+      values: '2022 2023 2024 2025 2026 Other'.split(' '),
+    }
+  },
+
+  subcollege: {
+    type: String,
+    enum: {
+      values: 'E CAS HE CALS Hotel AAP ILR D O N/A'.split(' '),
     }
   },
 
@@ -387,6 +394,7 @@ schema.statics.validateProfile = function (profile, cb) {
     profile.netid.length > 0 &&
     profile.school.length > 0 &&
     ['2022', '2023', '2024', '2025', '2026', 'Other'].indexOf(profile.graduationYear) > -1 &&
+    ['E', 'CAS', 'HE', 'CALS', 'Hotel', 'AAP', 'ILR', 'D', 'O', 'N/A'].indexOf(profile.subcollege) > -1 &&
     ['M', 'F', 'Non-binary', 'O', 'N'].indexOf(profile.gender) > -1
   ));
 };

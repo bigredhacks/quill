@@ -98,6 +98,23 @@
       </div>
 
       <div class="field">
+        <label> College </label>
+        <select name="subcollege" ng-model="user.profile.subcollege">
+          <option value="">College</option>
+          <option value="E">Engineering</option>
+          <option value="CAS">Arts and Sciences</option>
+          <option value="HE">Human Ecology</option>
+          <option value="CALS">Agriculture and Life Sciences</option>
+          <option value="Hotel">Hotel Management</option>
+          <option value="AAP">Architecture, Art, and Planning</option>
+          <option value="ILR">Industrial and Labor Relations</option>
+          <option value="D">Dyson</option>
+          <option value="O">Other Cornell Colleges (e.g. SC Johnson)</option>
+          <option value="N/A">N/A</option>
+        </select>
+      </div>
+
+      <div class="field">
         <label>Graduation Year</label>
         <select name="year" ng-model="selectedUser.profile.graduationYear">
           <option value="">Graduation Year</option>
