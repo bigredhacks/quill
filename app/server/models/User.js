@@ -38,6 +38,13 @@ var profile = {
     }
   },
 
+  degreeType: {
+    type: String,
+    enum: {
+      values: 'UG M PhD O'.split(' '),
+    }
+  },
+
   subcollege: {
     type: String,
     enum: {

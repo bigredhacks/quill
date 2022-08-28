@@ -115,6 +115,11 @@
       </div>
 
       <div class="field">
+        <label> Major </label>
+        <input type="text" ng-model="selectedUser.profile.major" />
+      </div>
+
+      <div class="field">
         <label>Graduation Year</label>
         <select name="year" ng-model="selectedUser.profile.graduationYear">
           <option value="">Graduation Year</option>
@@ -124,6 +129,17 @@
           <option value="2025">2025</option>
           <option value="2026">2026</option>
           <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>I'm pursuing a</label>
+        <select name="degree" ng-model="selectedUser.profile.degreeType">
+          <option value="">Degree Type</option>
+          <option value="UG">Undergraduate degree</option>
+          <option value="M">Masters degree</option>
+          <option value="PhD">PhD degree</option>
+          <option value="O">Other</option>
         </select>
       </div>
 
@@ -167,17 +183,6 @@
       </div>
 
       <div class="field">
-        <label>I would describe myself as a...</label>
-        <input type="text" placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
-          ng-model="selectedUser.profile.description">
-      </div>
-
-      <div class="field">
-        <label> Major </label>
-        <input type="text" ng-model="selectedUser.profile.major" />
-      </div>
-
-      <div class="field">
         <label> Github </label>
         <input type="url" ng-model="selectedUser.profile.github" />
       </div>
@@ -193,6 +198,17 @@
       </div>
 
       <div class="field">
+        <label> Website </label>
+        <input type="url" ng-model="selectedUser.profile.website" />
+      </div>
+
+      <div class="field">
+        <label>I would describe myself as a...</label>
+        <input type="text" placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
+          ng-model="selectedUser.profile.description">
+      </div>
+
+      <div class="field">
         <label>Years of programming experience</label>
         <select name="experience" ng-model="selectedUser.profile.experience">
           <option value="">Number of years</option>
@@ -203,10 +219,6 @@
         </select>
       </div>
 
-      <div class="field">
-        <label> Website </label>
-        <input type="url" ng-model="selectedUser.profile.website" />
-      </div>
 
       <div class="field">
         <label>
