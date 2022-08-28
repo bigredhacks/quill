@@ -139,6 +139,11 @@
       </div>
 
       <div class="field">
+        <label> If prefer to self-describe, please specify here:</label>
+        <input type="text" name="selfDescribedGender" ng-model="selectedUser.profile.selfDescribedGender">
+      </div>
+
+      <div class="field">
         <label>Race/Ethnicity</label>
         <select name="raceOrEthnicity" ng-model="selectedUser.profile.raceOrEthnicity">
           <option value="">Race/Ethnicity</option>
@@ -153,6 +158,12 @@
           <option value="O">Prefer to self-describe</option>
           <option value="N">I prefer not to answer</option>
         </select>
+      </div>
+
+      <div class="field">
+        <label> If prefer to self-describe, please specify here:</label>
+        <input type="text" name="selfDescribedRaceOrEthnicity"
+          ng-model="selectedUser.profile.selfDescribedRaceOrEthnicity">
       </div>
 
       <div class="field">
@@ -183,7 +194,7 @@
 
       <div class="field">
         <label>Years of programming experience</label>
-        <select name="experience" ng-model="user.profile.experience">
+        <select name="experience" ng-model="selectedUser.profile.experience">
           <option value="">Number of years</option>
           <option value="Under 1">Under 1</option>
           <option value="1 to 3">1 to 3</option>

@@ -2,12 +2,12 @@ const moment = require('moment');
 const swal = require('sweetalert');
 
 angular.module('reg')
-  .controller('AdminUsersCtrl',[
+  .controller('AdminUsersCtrl', [
     '$scope',
     '$state',
     '$stateParams',
     'UserService',
-    function($scope, $state, $stateParams, UserService){
+    function ($scope, $state, $stateParams, UserService) {
 
       $scope.pages = [];
       $scope.users = [];
@@ -19,17 +19,19 @@ angular.module('reg')
       $('.ui.dimmer').remove();
       // Populate the size of the modal for when it appears, with an arbitrary user.
       $scope.selectedUser = {};
-      $scope.selectedUser.sections = generateSections({status: '', confirmation: {
-        dietaryRestrictions: []
-      }, profile: ''});
+      $scope.selectedUser.sections = generateSections({
+        status: '', confirmation: {
+          dietaryRestrictions: []
+        }, profile: ''
+      });
 
-      function updatePage(data){
+      function updatePage(data) {
         $scope.users = data.users;
         $scope.currentPage = data.page;
         $scope.pageSize = data.size;
 
         var p = [];
-        for (var i = 0; i < data.totalPages; i++){
+        for (var i = 0; i < data.totalPages; i++) {
           p.push(i);
         }
         $scope.pages = p;
@@ -41,7 +43,7 @@ angular.module('reg')
           updatePage(response.data);
         });
 
-      $scope.$watch('queryText', function(queryText){
+      $scope.$watch('queryText', function (queryText) {
         UserService
           .getPage($stateParams.page, $stateParams.size, queryText)
           .then(response => {
@@ -49,14 +51,14 @@ angular.module('reg')
           });
       });
 
-      $scope.goToPage = function(page){
+      $scope.goToPage = function (page) {
         $state.go('app.admin.users', {
           page: page,
           size: $stateParams.size || 50
         });
       };
 
-      $scope.goUser = function($event, user){
+      $scope.goUser = function ($event, user) {
         $event.stopPropagation();
 
         $state.go('app.admin.user', {
@@ -64,14 +66,14 @@ angular.module('reg')
         });
       };
 
-      $scope.getCSV = function(){
+      $scope.getCSV = function () {
         UserService.getCSV();
       };
 
-      $scope.toggleCheckIn = function($event, user, index) {
+      $scope.toggleCheckIn = function ($event, user, index) {
         $event.stopPropagation();
 
-        if (!user.status.checkedIn){
+        if (!user.status.checkedIn) {
           swal({
             title: "Whoa, wait a minute!",
             text: "You are about to check in " + user.profile.name + "!",
@@ -91,18 +93,18 @@ angular.module('reg')
               }
             }
           })
-          .then(value => {
-            if (!value) {
-              return;
-            }
+            .then(value => {
+              if (!value) {
+                return;
+              }
 
-            UserService
-              .checkIn(user._id)
-              .then(response => {
-                $scope.users[index] = response.data;
-                swal("Accepted", response.data.profile.name + " has been checked in.", "success");
-              });
-          });
+              UserService
+                .checkIn(user._id)
+                .then(response => {
+                  $scope.users[index] = response.data;
+                  swal("Accepted", response.data.profile.name + " has been checked in.", "success");
+                });
+            });
         } else {
           UserService
             .checkOut(user._id)
@@ -113,7 +115,7 @@ angular.module('reg')
         }
       };
 
-      $scope.acceptUser = function($event, user, index) {
+      $scope.acceptUser = function ($event, user, index) {
         $event.stopPropagation();
 
         console.log(user);
@@ -177,10 +179,10 @@ angular.module('reg')
         });
       };
 
-      $scope.toggleAdmin = function($event, user, index) {
+      $scope.toggleAdmin = function ($event, user, index) {
         $event.stopPropagation();
 
-        if (!user.admin){
+        if (!user.admin) {
           swal({
             title: "Whoa, wait a minute!",
             text: "You are about make " + user.profile.name + " an admin!",
@@ -210,7 +212,7 @@ angular.module('reg')
                 $scope.users[index] = response.data;
                 swal("Made", response.data.profile.name + ' an admin.', "success");
               });
-            }
+          }
           );
         } else {
           UserService
@@ -222,14 +224,14 @@ angular.module('reg')
         }
       };
 
-      function formatTime(time){
+      function formatTime(time) {
         if (time) {
           return moment(time).format('MMMM Do YYYY, h:mm:ss a');
         }
       }
 
-      $scope.rowClass = function(user) {
-        if (user.admin){
+      $scope.rowClass = function (user) {
+        if (user.admin) {
           return 'admin';
         }
         if (user.status.confirmed) {
@@ -240,14 +242,14 @@ angular.module('reg')
         }
       };
 
-      function selectUser(user){
+      function selectUser(user) {
         $scope.selectedUser = user;
         $scope.selectedUser.sections = generateSections(user);
         $('.long.user.modal')
           .modal('show');
       }
 
-      function generateSections(user){
+      function generateSections(user) {
         return [
           {
             name: 'Basic Info',
@@ -255,111 +257,114 @@ angular.module('reg')
               {
                 name: 'Created On',
                 value: formatTime(user.timestamp)
-              },{
+              }, {
                 name: 'Last Updated',
                 value: formatTime(user.lastUpdated)
-              },{
+              }, {
                 name: 'Confirm By',
                 value: formatTime(user.status.confirmBy) || 'N/A'
-              },{
+              }, {
                 name: 'Checked In',
                 value: formatTime(user.status.checkInTime) || 'N/A'
-              },{
+              }, {
                 name: 'Email',
                 value: user.email
-              },{
+              }, {
                 name: 'Team',
                 value: user.teamCode || 'None'
               }
             ]
-          },{
+          }, {
             name: 'Profile',
             fields: [
               {
                 name: 'Name',
                 value: user.profile.name
-              },{
+              }, {
                 name: 'Gender',
                 value: user.profile.gender
-              },{
+              }, {
                 name: 'School',
                 value: user.profile.school
-              },{
+              }, {
                 name: 'Major',
                 value: user.profile.major
-              },{
+              }, {
                 name: 'Github',
                 value: user.profile.github
-              },{
+              }, {
                 name: 'Twitter',
                 value: user.profile.twitter
-              },{
+              }, {
+                name: 'Linkedin',
+                value: user.profile.linkedin
+              }, {
                 name: 'Website',
                 value: user.profile.website
-              },{
+              }, {
                 name: 'Graduation Year',
                 value: user.profile.graduationYear
-              },{
+              }, {
                 name: 'Description',
                 value: user.profile.description
-              },{
+              }, {
                 name: 'Essay',
                 value: user.profile.essay
               }
             ]
-          },{
+          }, {
             name: 'Confirmation',
             fields: [
               {
                 name: 'Phone Number',
                 value: user.confirmation.phoneNumber
-              },{
+              }, {
                 name: 'Dietary Restrictions',
                 value: user.confirmation.dietaryRestrictions.join(', ')
-              },{
+              }, {
                 name: 'Shirt Size',
                 value: user.confirmation.shirtSize
               }
             ]
-          },{
+          }, {
             name: 'Hosting',
             fields: [
               {
                 name: 'Needs Hosting Friday',
                 value: user.confirmation.hostNeededFri,
                 type: 'boolean'
-              },{
+              }, {
                 name: 'Needs Hosting Saturday',
                 value: user.confirmation.hostNeededSat,
                 type: 'boolean'
-              },{
+              }, {
                 name: 'Gender Neutral',
                 value: user.confirmation.genderNeutral,
                 type: 'boolean'
-              },{
+              }, {
                 name: 'Cat Friendly',
                 value: user.confirmation.catFriendly,
                 type: 'boolean'
-              },{
+              }, {
                 name: 'Smoking Friendly',
                 value: user.confirmation.smokingFriendly,
                 type: 'boolean'
-              },{
+              }, {
                 name: 'Hosting Notes',
                 value: user.confirmation.hostNotes
               }
             ]
-          },{
+          }, {
             name: 'Travel',
             fields: [
               {
                 name: 'Needs Reimbursement',
                 value: user.confirmation.needsReimbursement,
                 type: 'boolean'
-              },{
+              }, {
                 name: 'Received Reimbursement',
                 value: user.confirmation.needsReimbursement && user.status.reimbursementGiven
-              },{
+              }, {
                 name: 'Address',
                 value: user.confirmation.address ? [
                   user.confirmation.address.line1,
@@ -371,7 +376,7 @@ angular.module('reg')
                   ',',
                   user.confirmation.address.country,
                 ].join(' ') : ''
-              },{
+              }, {
                 name: 'Additional Notes',
                 value: user.confirmation.notes
               }
