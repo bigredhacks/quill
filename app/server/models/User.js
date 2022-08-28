@@ -99,6 +99,14 @@ var profile = {
     min: 1,
     max: 150,
   },
+
+  source: {
+    type: String,
+    enum: {
+      values: 'email class friend socialmedia other'.split(' ')
+    }
+  },
+
   otherSource: {
     type: String,
     min: 1,
@@ -412,7 +420,8 @@ schema.statics.validateProfile = function (profile, cb) {
     ['M', 'F', 'Non-binary', 'O', 'N'].indexOf(profile.gender) > -1 &&
     ['H/L', 'C', 'B/AA', 'NH/PI', 'A', 'SA', 'AI/AN', 'ME', 'O', 'N'].indexOf(profile.raceOrEthnicity) > -1 &&
     ['UG', 'M', 'PhD', 'O'].indexOf(profile.degreeType) > -1 &&
-    ['under1', '1to3', 'over3', 'N/A'].indexOf(profile.experience) > -1
+    ['under1', '1to3', 'over3', 'N/A'].indexOf(profile.experience) > -1 &&
+    ['email', 'class', 'friend', 'socialmedia', 'other'].indexOf(profile.source) > -1
   ));
 };
 

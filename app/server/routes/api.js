@@ -181,7 +181,7 @@ module.exports = function (router) {
       'profile.adult', 'profile.name', 'profile.school', 'profile.subcollege', 'profile.netid',
       'profile.gender', 'profile.selfDescribedGender', 'profile.raceOrEthnicity', 'profile.selfDescribedRaceOrEthnicity',
       'profile.graduationYear', 'profile.degreeType', 'profile.major', 'profile.github', 'profile.twitter', 'profile.linkedin', 'profile.website',
-      'profile.description', 'profile.essay', 'profile.experience', 'status.name', 'status.completedProfile', 'status.admitted',
+      'profile.description', 'profile.essay', 'profile.experience', 'profile.source', 'profile.otherSource', 'status.name', 'status.completedProfile', 'status.admitted',
       'status.confirmed', 'status.declined', 'status.checkedIn',
       'status.reimbursementGiven', 'confirmation.signatureLiability',
       'confirmation.signaturePhotoRelease', 'confirmation.signatureCodeOfConduct',

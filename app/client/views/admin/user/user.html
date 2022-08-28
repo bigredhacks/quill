@@ -99,7 +99,7 @@
 
       <div class="field">
         <label> College </label>
-        <select name="subcollege" ng-model="user.profile.subcollege">
+        <select name="subcollege" ng-model="selectedUser.profile.subcollege">
           <option value="">College</option>
           <option value="E">Engineering</option>
           <option value="CAS">Arts and Sciences</option>
@@ -210,7 +210,7 @@
 
       <div class="field">
         <label>Years of programming experience</label>
-        <select name="experience" ng-model="user.profile.experience">
+        <select name="experience" ng-model="selectedUser.profile.experience">
           <option value="">Number of years</option>
           <option value="under1">Under 1</option>
           <option value="1to3">1 to 3</option>
@@ -225,6 +225,23 @@
         </label>
         <textarea ng-model="selectedUser.profile.essay">
         </textarea>
+      </div>
+
+      <div class="field">
+        <label>How did you hear about BigRed//Hacks?</label>
+        <select name="source" ng-model="selectedUser.profile.source">
+          <option value="">Source</option>
+          <option value="email">Email Listserv</option>
+          <option value="class">Professor/Class</option>
+          <option value="friend">Friend</option>
+          <option value="socialmedia">Social Media</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label> If other, please specify here:</label>
+        <input type="text" name="otherSource" ng-model="selectedUser.profile.otherSource">
       </div>
 
       <div class="field" ng-hide="isMitStudent">
