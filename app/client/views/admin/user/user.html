@@ -82,6 +82,11 @@
         <input type="text" name="name" ng-model="selectedUser.profile.name">
       </div>
 
+      <div class="field">
+        <label> NetID (Non-Cornell students please put N/A) </label>
+        <input type="text" name="netid" ng-model="selectedUser.profile.netid">
+      </div>
+
       <div class="field" ng-show="autoFilledSchool">
         <label> School </label>
         <input class="ui input" disabled="disabled" ng-show="autoFilledSchool" ng-model="selectedUser.profile.school">
@@ -157,6 +162,17 @@
       <div class="field">
         <label> LinkedIn </label>
         <input type="text" ng-model="selectedUser.profile.linkedin">
+      </div>
+
+      <div class="field">
+        <label>Years of programming experience</label>
+        <select name="experience" ng-model="user.profile.experience">
+          <option value="">Number of years</option>
+          <option value="Under 1">Under 1</option>
+          <option value="1 to 3">1 to 3</option>
+          <option value="More than 3">More than 3</option>
+          <option value="N/A">N/A</option>
+        </select>
       </div>
 
       <div class="field">

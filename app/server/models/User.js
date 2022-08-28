@@ -19,6 +19,12 @@ var profile = {
     default: false,
   },
 
+  netid: {
+    type: String,
+    min: 1,
+    max: 150,
+  },
+
   school: {
     type: String,
     min: 1,
@@ -53,6 +59,11 @@ var profile = {
     min: 1,
     max: 150,
   },
+  linkedin: {
+    type: String,
+    min: 1,
+    max: 150,
+  },
   website: {
     type: String,
     min: 1,
@@ -62,6 +73,21 @@ var profile = {
     type: String,
     min: 0,
     max: 1500
+  },
+  selfDescribedGender: {
+    type: String,
+    min: 1,
+    max: 150,
+  },
+  selfDescribedRaceOrEthnicity: {
+    type: String,
+    min: 1,
+    max: 150,
+  },
+  otherSource: {
+    type: String,
+    min: 1,
+    max: 150,
   },
 
   // Optional info for demographics
@@ -358,6 +384,7 @@ schema.statics.validateProfile = function (profile, cb) {
   return cb(!(
     profile.name.length > 0 &&
     profile.adult &&
+    profile.netid.length > 0 &&
     profile.school.length > 0 &&
     ['2022', '2023', '2024', '2025', '2026', 'Other'].indexOf(profile.graduationYear) > -1 &&
     ['M', 'F', 'Non-binary', 'O', 'N'].indexOf(profile.gender) > -1
