@@ -124,7 +124,7 @@ var profile = {
   raceOrEthnicity: {
     type: String,
     enum: {
-      values: 'H/L C B/AA NH/PI A AI/AN O P'.split(' ')
+      values: 'H/L C B/AA NH/PI A AI/AN T O P'.split(' ')
     }
   },
 
@@ -418,7 +418,7 @@ schema.statics.validateProfile = function (profile, cb) {
     ['2022', '2023', '2024', '2025', '2026', 'Other'].indexOf(profile.graduationYear) > -1 &&
     ['E', 'CAS', 'HE', 'CALS', 'Hotel', 'AAP', 'ILR', 'D', 'O', 'N/A'].indexOf(profile.subcollege) > -1 &&
     ['M', 'F', 'Non-binary', 'O', 'N'].indexOf(profile.gender) > -1 &&
-    ['H/L', 'C', 'B/AA', 'NH/PI', 'A', 'AI/AN', 'O', 'N'].indexOf(profile.raceOrEthnicity) > -1 &&
+    ['H/L', 'C', 'B/AA', 'NH/PI', 'A', 'AI/AN', 'T', 'O', 'N'].indexOf(profile.raceOrEthnicity) > -1 &&
     ['UG', 'M', 'PhD', 'O'].indexOf(profile.degreeType) > -1 &&
     ['under1', '1to3', 'over3', 'N/A'].indexOf(profile.experience) > -1 &&
     ['email', 'class', 'friend', 'socialmedia', 'other'].indexOf(profile.source) > -1
