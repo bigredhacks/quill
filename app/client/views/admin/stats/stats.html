@@ -1,47 +1,41 @@
 <div id="stats">
 
-  <div
-    class="ui green segment"
-    ng-class="{'loading': loading}">
+  <div class="ui green segment" ng-class="{'loading': loading}">
     <div class="ui header">
       Stats
     </div>
     <div class="content">
       <em> Last updated: {{fromNow(stats.lastUpdated)}}</em>
       <div class="ui list">
-        <div
-          class="item">
+        <div class="item">
           <i class="green circle check icon"></i>
           <div class="content">
             <strong>
-            Total Users
+              Total Users
             </strong> :
             {{stats.total}}
           </div>
         </div>
-        <div
-          class="item">
+        <div class="item">
           <i class="green circle check icon"></i>
           <div class="content">
             <strong>
-            Verified Users
+              Verified Users
             </strong> :
             {{stats.verified}} ({{stats.verified / stats.total * 100 | number: 1}}%)
           </div>
         </div>
-        <div
-          class="item">
+        <div class="item">
           <i class="green circle check icon"></i>
           <div class="content">
             <strong>
-            Submitted Users
+              Submitted Users
             </strong> :
             {{stats.submitted}} ({{stats.submitted / stats.total * 100 | number: 1}}%)
           </div>
         </div>
         <div class="ui divider"></div>
-        <div
-          class="item">
+        <div class="item">
           <i class="green circle check icon"></i>
           <div class="content">
             <strong>
@@ -50,8 +44,7 @@
             {{stats.admitted}}
           </div>
         </div>
-        <div
-          class="item">
+        <div class="item">
           <i class="green circle check icon"></i>
           <div class="content">
             <strong>
@@ -60,8 +53,7 @@
             {{stats.confirmed}}
           </div>
         </div>
-		<div
-          class="item">
+        <div class="item">
           <i class="green circle check icon"></i>
           <div class="content">
             <strong>
@@ -70,8 +62,7 @@
             {{stats.confirmedInPerson}}
           </div>
         </div>
-		<div
-          class="item">
+        <div class="item">
           <i class="green circle check icon"></i>
           <div class="content">
             <strong>
@@ -80,8 +71,7 @@
             {{stats.confirmedVirtual}}
           </div>
         </div>
-        <div
-          class="item">
+        <div class="item">
           <i class="green circle check icon"></i>
           <div class="content">
             <strong>
@@ -96,7 +86,7 @@
             <strong>
               Declined
             </strong> :
-              {{stats.declined}}
+            {{stats.declined}}
           </div>
         </div>
 
@@ -106,7 +96,7 @@
             <strong>
               Checked In
             </strong> :
-              {{stats.checkedIn}}
+            {{stats.checkedIn}}
           </div>
         </div>
 
@@ -118,13 +108,13 @@
             <strong>
               Unisex shirt sizes:
             </strong> :
-              XS ({{stats.shirtSizes['XS']}})
-              S ({{stats.shirtSizes['S']}})
-              M ({{stats.shirtSizes['M']}})
-              L ({{stats.shirtSizes['L']}})
-              XL ({{stats.shirtSizes['XL']}})
-              2XL ({{stats.shirtSizes['2XL']}})
-              3XL ({{stats.shirtSizes['3XL']}})
+            XS ({{stats.shirtSizes['XS']}})
+            S ({{stats.shirtSizes['S']}})
+            M ({{stats.shirtSizes['M']}})
+            L ({{stats.shirtSizes['L']}})
+            XL ({{stats.shirtSizes['XL']}})
+            2XL ({{stats.shirtSizes['2XL']}})
+            3XL ({{stats.shirtSizes['3XL']}})
           </div>
         </div>
 
@@ -167,8 +157,7 @@
             <strong>
               Dietary Restrictions:
             </strong>
-            <span
-              ng-repeat="restriction in stats.dietaryRestrictions | orderBy: '-count'">
+            <span ng-repeat="restriction in stats.dietaryRestrictions | orderBy: '-count'">
               {{restriction.name}} ({{restriction.count}})
             </span>
           </div>
@@ -178,9 +167,7 @@
     </div>
   </div>
 
-  <div
-    class="ui pink segment"
-    ng-class="{'loading': loading}">
+  <div class="ui pink segment" ng-class="{'loading': loading}">
     <div class="ui header">
       Demographics
     </div>
@@ -194,7 +181,8 @@
       <div class="item">
         <i class="female icon"></i>
         <div class="content">
-          <strong>Female</strong>: {{stats.demo.gender['F']}} ({{stats.demo.gender['F'] / stats.total * 100 | number:1}}%)
+          <strong>Female</strong>: {{stats.demo.gender['F']}} ({{stats.demo.gender['F'] / stats.total * 100 |
+          number:1}}%)
         </div>
       </div>
       <div class="item">
@@ -206,36 +194,92 @@
       <div class="item">
         <i class="other gender icon"></i>
         <div class="content">
-          <strong>Other</strong>: {{stats.demo.gender['O']}} ({{stats.demo.gender['O'] / stats.total * 100 | number:1}}%)
+          <strong>Other</strong>: {{stats.demo.gender['O']}} ({{stats.demo.gender['O'] / stats.total * 100 |
+          number:1}}%)
         </div>
       </div>
       <div class="item">
         <i class="question icon"></i>
         <div class="content">
-          <strong>Did not respond</strong>: {{stats.demo.gender['N']}} ({{stats.demo.gender['N'] / stats.total * 100 | number:1 }}%)
+          <strong>Did not respond</strong>: {{stats.demo.gender['N']}} ({{stats.demo.gender['N'] / stats.total * 100 |
+          number:1 }}%)
         </div>
       </div>
     </div>
     <div class="ui divider"></div>
-      <div class="ui list">
-        <div class="item">
-          <strong>Fresh:</strong> {{stats.demo.year['2022']}} ({{stats.demo.year['2022'] / stats.total * 100 | number: 1}}%)
-        </div>
-        <div class="item">
-          <strong>Soph:</strong> {{stats.demo.year['2023']}} ({{stats.demo.year['2023'] / stats.total * 100 | number: 1}}%)
-        </div>
-        <div class="item">
-         <strong>Junior:</strong> {{stats.demo.year['2024']}} ({{stats.demo.year['2024'] / stats.total * 100 | number: 1}}%)
-        </div>
-        <div class="item">
-          <strong>Senior:</strong> {{stats.demo.year['2025']}} ({{stats.demo.year['2025'] / stats.total * 100 | number: 1}}%)
-        </div>
+    <div class="ui list">
+      <div class="item">
+        <strong>Fresh:</strong> {{stats.demo.year['2026']}} ({{stats.demo.year['2026'] / stats.total * 100 | number:
+        1}}%)
       </div>
+      <div class="item">
+        <strong>Soph:</strong> {{stats.demo.year['2025']}} ({{stats.demo.year['2025'] / stats.total * 100 | number:
+        1}}%)
+      </div>
+      <div class="item">
+        <strong>Junior:</strong> {{stats.demo.year['2024']}} ({{stats.demo.year['2024'] / stats.total * 100 | number:
+        1}}%)
+      </div>
+      <div class="item">
+        <strong>Senior:</strong> {{stats.demo.year['2023']}} ({{stats.demo.year['2023'] / stats.total * 100 | number:
+        1}}%)
+      </div>
+    </div>
     <div class="ui divider"></div>
     <div class="ui list">
-      <div
-        class="item"
-        ng-repeat="school in stats.demo.schools | orderBy: '-count'">
+      <div class="item">
+        <strong>American Indian/Alaska Native:</strong> {{stats.demo.race['AI/AN']}} ({{stats.demo.year['AI/AN'] /
+        stats.total * 100 | number:
+        1}}%)
+      </div>
+      <div class="item">
+        <strong>Asian:</strong> {{stats.demo.race['A']}} ({{stats.demo.race['A'] / stats.total * 100 | number:
+        1}}%)
+      </div>
+      <div class="item">
+        <strong>Black/African American:</strong> {{stats.demo.race['B/AA']}} ({{stats.demo.race['B/AA'] / stats.total *
+        100 | number:
+        1}}%)
+      </div>
+      <div class="item">
+        <strong>American Indian/Alaska Native:</strong> {{stats.demo.race['AI/AN']}} ({{stats.demo.race['AI/AN'] /
+        stats.total * 100 | number:
+        1}}%)
+      </div>
+      <div class="item">
+        <strong>Hispanic/Latino:</strong> {{stats.demo.race['H/L']}} ({{stats.demo.race['H/L'] / stats.total * 100 |
+        number:
+        1}}%)
+      </div>
+      <div class="item">
+        <strong>Native Hawaiian/Pacific Islander:</strong> {{stats.demo.race['NH/PI']}} ({{stats.demo.race['NH/PI'] /
+        stats.total * 100 | number:
+        1}}%)
+      </div>
+      <div class="item">
+        <strong>White/Caucasian:</strong> {{stats.demo.race['C']}} ({{stats.demo.race['C'] /
+        stats.total * 100 | number:
+        1}}%)
+      </div>
+      <div class="item">
+        <strong>Two or more:</strong> {{stats.demo.race['T']}} ({{stats.demo.race['T'] /
+        stats.total * 100 | number:
+        1}}%)
+      </div>
+      <div class="item">
+        <strong>Prefer to self-describe:</strong> {{stats.demo.race['O']}} ({{stats.demo.race['O'] /
+        stats.total * 100 | number:
+        1}}%)
+      </div>
+      <div class="item">
+        <strong>I prefer not to answer:</strong> {{stats.demo.race['N']}} ({{stats.demo.race['N'] /
+        stats.total * 100 | number:
+        1}}%)
+      </div>
+    </div>
+    <div class="ui divider"></div>
+    <div class="ui list">
+      <div class="item" ng-repeat="school in stats.demo.schools | orderBy: '-count'">
         <div class="content">
           <strong>{{school.email}}</strong> : {{school.count}} ({{school.count / stats.total * 100 | number: 1}}%)
           <p>
@@ -258,7 +302,7 @@
     </div>
   </div>
 
-<!--   <div
+  <!--   <div
     class="ui purple segment"
     ng-class="{'loading': loading}">
     <div class="ui header">
