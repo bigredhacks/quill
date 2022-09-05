@@ -14,6 +14,7 @@ function calculateStats() {
       gender: {
         M: 0,
         F: 0,
+        Nonbinary: 0,
         O: 0,
         N: 0
       },
@@ -24,17 +25,18 @@ function calculateStats() {
         '2024': 0,
         '2025': 0,
         '2026': 0,
+        'Other': 0
       },
       race: {
+        'AI/AN': 0,
         'H/L': 0,
         'C': 0,
         'B/AA': 0,
         'NH/PI': 0,
         'A': 0,
-        'AI/AN': 0,
         'T': 0,
         'O': 0,
-        'P': 0,
+        'N': 0,
       }
     },
 
