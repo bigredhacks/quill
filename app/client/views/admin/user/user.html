@@ -284,6 +284,20 @@
       </div>
 
       <div class="field">
+        <label>
+          Age (Required)
+        </label>
+        <input ng-model="selectedUser.confirmation.age"></input>
+      </div>
+
+      <div class="field">
+        <label>
+          Country (Required)
+        </label>
+        <input ng-model="selectedUser.confirmation.fromcountry"></input>
+      </div>
+
+      <div class="field">
         <label> Dietary Restrictions </label>
         <input type="text" ng-model="selectedUser.confirmation.dietaryRestrictions" />
       </div>
@@ -291,6 +305,27 @@
       <div class="field">
         <label> Shirt Size </label>
         <input type="text" ng-model="selectedUser.profile.shirtSize" />
+      </div>
+
+      <div class="field">
+        <label> Mailing Address </label>
+        <p>
+          If you are a non-Cornell student attending the event virtually, please fill out your address so that we can mail you your swag from the event!
+        </p>
+        <label>Full Name</label>
+        <input ng-model="selectedUser.confirmation.mailing.name"></input>
+        <label>Address Line 1 - Street address, P.O. box, company name, c/o</label>
+        <input  ng-model="selectedUser.confirmation.mailing.line1"></input>
+        <label>Address Line 2 - Apartment, suite, unit, building, floor, etc.</label>
+        <input ng-model="selectedUser.confirmation.mailing.line2"></input>
+        <label>City</label>
+        <input ng-model="selectedUser.confirmation.mailing.city"></input>
+        <label>State/Province/Region</label>
+        <input ng-model="selectedUser.confirmation.mailing.state"></input>
+        <label>ZIP / Postal Code</label>
+        <input ng-model="selectedUser.confirmation.mailing.zip"></input>
+        <label>Country</label>
+        <input ng-model="selectedUser.confirmation.mailing.country"></input>
       </div>
 
       <div class="field">
@@ -427,7 +462,7 @@
         </i>
       </div>-->
 
-    <div class="field">
+    <!-- <div class="field">
       <label>Full Name</label>
       <input type="text" name="name" ng-model="selectedUser.confirmation.mail.name">
     </div>
@@ -459,7 +494,7 @@
         <label> Country </label>
         <input type="text" name="country" ng-model="selectedUser.confirmation.mail.country">
       </div>
-    </div>
+    </div> -->
     <!--
       <div class="field">
         <label> Receipt </label>

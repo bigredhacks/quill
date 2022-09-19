@@ -146,20 +146,20 @@ var confirmation = {
       values: 'XS S M L XL 2XL 3XL'.split(' ')
     }
   },
+  age: String,
+  fromcountry: String,
   wantsHardware: Boolean,
   hardware: String,
   resume: String,
+  mailingname: String,
+  mailingline1: String,
+  mailingline2: String,
+  mailingcity: String,
+  mailingstate: String,
+  mailingzip: String,
+  mailingcountry: String,
 
   needsReimbursement: Boolean,
-  mail: {
-    name: String,
-    line1: String,
-    line2: String,
-    city: String,
-    state: String,
-    zip: String,
-    country: String
-  },
   receipt: String,
   discordId: String,
 
