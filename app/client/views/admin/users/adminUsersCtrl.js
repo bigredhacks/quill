@@ -21,7 +21,7 @@ angular.module('reg')
       $scope.selectedUser = {};
       $scope.selectedUser.sections = generateSections({
         status: '', confirmation: {
-          dietaryRestrictions: []
+          dietaryRestriction: []
         }, profile: ''
       });
 
@@ -320,7 +320,7 @@ angular.module('reg')
                 value: user.confirmation.phoneNumber
               }, {
                 name: 'Dietary Restrictions',
-                value: user.confirmation.dietaryRestrictions.join(', ')
+                value: user.confirmation.dietaryRestriction.join(', ')
               }, {
                 name: 'Shirt Size',
                 value: user.confirmation.shirtSize

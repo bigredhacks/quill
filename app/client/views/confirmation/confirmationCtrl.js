@@ -25,7 +25,7 @@ angular.module('reg')
       // -------------------------------
       // All this just for dietary restriction checkboxes fml
 
-      var dietaryRestrictions = {
+      var dietaryRestriction = {
         'Vegetarian': false,
         'Vegan': false,
         'Halal': false,
@@ -34,15 +34,15 @@ angular.module('reg')
         'Nut Allergy': false
       };
 
-      if (user.confirmation.dietaryRestrictions){
-        user.confirmation.dietaryRestrictions.forEach(function(restriction){
-          if (restriction in dietaryRestrictions){
-            dietaryRestrictions[restriction] = true;
+      if (user.confirmation.dietaryRestriction){
+        user.confirmation.dietaryRestriction.forEach(function(restriction){
+          if (restriction in dietaryRestriction){
+            dietaryRestriction[restriction] = true;
           }
         });
       }
 
-      $scope.dietaryRestrictions = dietaryRestrictions;
+      $scope.dietaryRestriction = dietaryRestriction;
 
       // -------------------------------
 
@@ -50,12 +50,12 @@ angular.module('reg')
         var confirmation = $scope.user.confirmation;
         // Get the dietary restrictions as an array
         var drs = [];
-        Object.keys($scope.dietaryRestrictions).forEach(function(key){
-          if ($scope.dietaryRestrictions[key]){
+        Object.keys($scope.dietaryRestriction).forEach(function(key){
+          if ($scope.dietaryRestriction[key]){
             drs.push(key);
           }
         });
-        confirmation.dietaryRestrictions = drs;
+        confirmation.dietaryRestriction = drs;
 
         UserService
           .updateConfirmation(user._id, confirmation)
