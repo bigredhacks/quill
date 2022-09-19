@@ -98,108 +98,75 @@
             </select>
           </div>
 
-          <!--<div class="field">
-            <label>
-              Will you be needing hardware?
-            </label>
-            <div class="ui checkbox">
-              <input type="checkbox" ng-model="user.confirmation.wantsHardware">
-              <label> Yes, I would like to use hardware in my hack. </label>
-            </div>
-          </div>
-
-          <div
-            class="field"
-            ng-show="user.confirmation.wantsHardware">
-            <label>
-              What kind of hardware would be useful for you?
-            </label>
+          <div class="field">
+            <label> Mailing Address </label>
             <p>
-              We will have a hardware checkout, and we'll try our best to provide things that would be useful to you - however, we can't guarantee everything. We will publish a list of available hardware closer to the day of the event.
+              If you are non-Cornell student attending the event virtually, please fill out your address so that we can mail you your swag from the event!
             </p>
-            <input type="text" ng-model="user.confirmation.hardware">
-          </div>-->
-
-
-          <!--<br>
-          <br>
-
-          <div class="divided title"> Skills & Accomplishments </div>
-
-          <div class="field">
-            <label> What are you studying? </label>
-            <input type="text"
-                   name="study"
-                   placeholder="Computer Science, Product Design, Basket Weaving, etc."
-                   ng-model="user.confirmation.major">
-          </div>
-
-          <div class="field">
-            <label> Github </label>
-            <input type="text"
-                   name="github"
-                   placeholder="https://github.com/foobar"
-                   ng-model="user.confirmation.github">
-          </div>
-
-          <div class="field">
-            <label> Twitter </label>
-            <input type="text"
-                   name="twitter"
-                   placeholder="https://twitter.com/foobar"
-                   ng-model="user.confirmation.twitter">
-          </div>-->
-
-          <br>
-          <br>
-
-          <div class="divided title">Address</div>
-
-          <div>
-
-            <div class="ui header">
-              Mailing Address
-            </div>
-
             <p>
-              If you are non-Cornell student attending the event virtually, please fill out your address
-              so that we can mail you your swag from the event!
+              Full Name
             </p>
+            <input ng-model="user.confirmation.mailing.name"></input>
+            <p>
+              Address Line 1 - Street address, P.O. box, company name, c/o
+            </p>
+            <input ng-model="user.confirmation.mailing.line1"></input>
+            <p>
+              Address Line 2 - Apartment, suite, unit, building, floor, etc.
+            </p>
+            <input ng-model="user.confirmation.mailing.line2"></input>
+            <p>
+              City
+            </p>
+            <input ng-model="user.confirmation.mailing.city"></input>
+            <p>
+              State/Province/Region
+            </p>
+            <input ng-model="user.confirmation.mailing.state"></input>
+            <p>
+              ZIP / Postal Code
+            </p>
+            <input ng-model="user.confirmation.mailing.zip"></input>
+            <p>
+              Country
+            </p>
+            <input ng-model="user.confirmation.mailing.country"></input>
+          </div>
+<!-- 
+          <div class="field">
+            <label>Full Name</label>
+            <input type="text" name="name" ng-model="user.confirmation.mail.name">
+          </div>
 
+          <div class="field">
+            <label> Address Line 1 - Street address, P.O. box, company name, c/o </label>
+            <input type="text" name="addressLine1" ng-model="user.confirmation.mail.line1">
+          </div>
+
+          <div class="field">
+            <label> Address Line 2 - Apartment, suite, unit, building, floor, etc. </label>
+            <input type="text" name="addressLine2" ng-model="user.confirmation.mail.line2">
+          </div>
+
+          <div class="four fields">
             <div class="field">
-              <label>Full Name</label>
-              <input type="text" name="name" ng-model="user.confirmation.mail.name">
+              <label> City </label>
+              <input type="text" name="city" ng-model="user.confirmation.mail.city">
             </div>
-
             <div class="field">
-              <label> Address Line 1 - Street address, P.O. box, company name, c/o </label>
-              <input type="text" name="addressLine1" ng-model="user.confirmation.mail.line1">
+              <label> State/Province/Region </label>
+              <input type="text" name="state" ng-model="user.confirmation.mail.state">
             </div>
-
             <div class="field">
-              <label> Address Line 2 - Apartment, suite, unit, building, floor, etc. </label>
-              <input type="text" name="addressLine2" ng-model="user.confirmation.mail.line2">
+              <label> ZIP / Postal Code </label>
+              <input type="text" name="zip" ng-model="user.confirmation.mail.zip">
             </div>
-
-            <div class="four fields">
-              <div class="field">
-                <label> City </label>
-                <input type="text" name="city" ng-model="user.confirmation.mail.city">
-              </div>
-              <div class="field">
-                <label> State/Province/Region </label>
-                <input type="text" name="state" ng-model="user.confirmation.mail.state">
-              </div>
-              <div class="field">
-                <label> ZIP / Postal Code </label>
-                <input type="text" name="zip" ng-model="user.confirmation.mail.zip">
-              </div>
-              <div class="field">
-                <label> Country </label>
-                <input type="text" name="country" ng-model="user.confirmation.mail.country">
-              </div>
+            <div class="field">
+              <label> Country </label>
+              <input type="text" name="country" ng-model="user.confirmation.mail.country">
             </div>
           </div>
+        </div> -->
 
           <br>
           <br>
