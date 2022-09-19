@@ -188,7 +188,7 @@ module.exports = function (router) {
       'confirmation.signatureLogisticsRelease', 'confirmation.communicationRelease', 'confirmation.friendRegistration', 'confirmation.age', 'confirmation.fromcountry',
       'confirmation.phoneNumber', 'confirmation.shirtSize', 'confirmation.inPerson', 'confirmation.mailingname', 'confirmation.mailingline1', 
       'confirmation.mailingline2', 'confirmation.mailingcity',
-      'confirmation.mailingstate', 'confirmation.mailingzip', 'confirmation.mailingcountry',  'confirmation.discordId',
+      'confirmation.mailingstate', 'confirmation.mailingzip', 'confirmation.mailingcountry',  'confirmation.discordId', 'confirmation.otherDietaryRestrictions'
     ];
     var fs = require('fs');
 

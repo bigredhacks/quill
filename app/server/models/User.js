@@ -147,7 +147,7 @@ var confirmation = {
     }
   },
   age: String,
-  fromcountry: String,
+  fromCountry: String,
   wantsHardware: Boolean,
   hardware: String,
   resume: String,
@@ -179,6 +179,7 @@ var confirmation = {
   communicationRelease: Boolean,
   friendRegistration: Boolean,
   inPerson: Boolean,
+  otherDietaryRestrictions: String,
 };
 
 var status = {

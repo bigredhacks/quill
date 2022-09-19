@@ -41,14 +41,13 @@
             <label>
               Country (Required)
             </label>
-            <input name="fromcountry" ng-model="user.confirmation.fromcountry"></input>
+            <input name="fromCountry" ng-model="user.confirmation.fromCountry"></input>
           </div>
-
           <div class="field">
             <label> Dietary Restrictions </label>
 
             <p>
-              If your restriction is not included here, please let us know in the additional notes at the bottom.
+              If your restriction is not included here, please let us know below under "Other Dietary Restrictions"
             </p>
             <p>
               We'll make sure you get fed :)
@@ -65,6 +64,13 @@
               </div>
 
             </div>
+          </div>
+
+          <div class="field">
+            <label>
+              Other Dietary Restrictions:
+            </label>
+            <input name="otherDietaryRestrictions" ng-model="user.confirmation.otherDietaryRestrictions"></input>
           </div>
 
           <div class="field">
