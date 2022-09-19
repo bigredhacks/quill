@@ -324,6 +324,12 @@ angular.module('reg')
               }, {
                 name: 'Shirt Size',
                 value: user.confirmation.shirtSize
+              }, {
+                name: 'Age',
+                value: user.confirmation.age
+              }, {
+                name: 'Country',
+                value: user.confirmation.fromCountry
               }
             ]
           }, {
