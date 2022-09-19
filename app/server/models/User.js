@@ -139,7 +139,7 @@ var profile = {
 // Only after confirmed
 var confirmation = {
   phoneNumber: String,
-  dietaryRestriction: [String],
+  dietaryRestrictions: [String],
   shirtSize: {
     type: String,
     enum: {

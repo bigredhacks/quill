@@ -63,10 +63,10 @@
           </div>
 
           <div class="inline fields">
-            <div class="field" ng-repeat="(key, value) in dietaryRestriction">
+            <div class="field" ng-repeat="(key, value) in dietaryRestrictions">
 
               <div class="ui checkbox">
-                <input type="checkbox" ng-model="dietaryRestriction[key]" />
+                <input type="checkbox" ng-model="dietaryRestrictions[key]" />
                 <label>{{key}}</label>
               </div>
 
@@ -290,16 +290,6 @@
             </div>
           </div>
 
-          <div class="field"
-            ng-if="(user.email.split('@')[1] == 'cornell.edu') && (user.profile.school == 'Cornell University')">
-            <label>
-              Will you be attending in-person?
-            </label>
-            <div class="ui checkbox">
-              <input type="checkbox" ng-model="user.confirmation.inPerson">
-              <label> Yes, I will be attending BigRed//Hacks 2022 in-person. </label>
-            </div>
-          </div>
           <br>
           <br>
 

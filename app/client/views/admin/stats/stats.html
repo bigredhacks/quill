@@ -157,7 +157,7 @@
             <strong>
               Dietary Restrictions:
             </strong>
-            <span ng-repeat="restriction in stats.dietaryRestriction | orderBy: '-count'">
+            <span ng-repeat="restriction in stats.dietaryRestrictions | orderBy: '-count'">
               {{restriction.name}} ({{restriction.count}})
             </span>
           </div>

@@ -73,7 +73,7 @@ function calculateStats() {
       'None': 0
     },
 
-    dietaryRestriction: {},
+    dietaryRestrictions: {},
 
     hostNeededFri: 0,
     hostNeededSat: 0,
@@ -195,12 +195,12 @@ function calculateStats() {
           += (user.confirmation.hostNeededFri || user.confirmation.hostNeededSat) && user.profile.gender == "N" ? 1 : 0;
 
         // Dietary restrictions
-        if (user.confirmation.dietaryRestriction) {
-          user.confirmation.dietaryRestriction.forEach(function (restriction) {
-            if (!newStats.dietaryRestriction[restriction]) {
-              newStats.dietaryRestriction[restriction] = 0;
+        if (user.confirmation.dietaryRestrictions) {
+          user.confirmation.dietaryRestrictions.forEach(function (restriction) {
+            if (!newStats.dietaryRestrictions[restriction]) {
+              newStats.dietaryRestrictions[restriction] = 0;
             }
-            newStats.dietaryRestriction[restriction] += 1;
+            newStats.dietaryRestrictions[restriction] += 1;
           });
         }
 
@@ -212,14 +212,14 @@ function calculateStats() {
         newStats.confirmedVirtual = newStats.confirmed - newStats.confirmedInPerson;
         // Transform dietary restrictions into a series of objects
         var restrictions = [];
-        _.keys(newStats.dietaryRestriction)
+        _.keys(newStats.dietaryRestrictions)
           .forEach(function (key) {
             restrictions.push({
               name: key,
-              count: newStats.dietaryRestriction[key],
+              count: newStats.dietaryRestrictions[key],
             });
           });
-        newStats.dietaryRestriction = restrictions;
+        newStats.dietaryRestrictions = restrictions;
 
         // Transform schools into an array of objects
         var schools = [];
