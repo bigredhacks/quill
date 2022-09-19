@@ -151,7 +151,7 @@ var confirmation = {
   resume: String,
 
   needsReimbursement: Boolean,
-  address: {
+  mail: {
     name: String,
     line1: String,
     line2: String,

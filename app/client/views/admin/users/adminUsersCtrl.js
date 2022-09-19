@@ -331,15 +331,15 @@ angular.module('reg')
             fields: [
               {
                 name: 'Address',
-                value: user.confirmation.address ? [
-                  user.confirmation.address.line1,
-                  user.confirmation.address.line2,
-                  user.confirmation.address.city,
+                value: user.confirmation.mail ? [
+                  user.confirmation.mail.line1,
+                  user.confirmation.mail.line2,
+                  user.confirmation.mail.city,
                   ',',
-                  user.confirmation.address.state,
-                  user.confirmation.address.zip,
+                  user.confirmation.mail.state,
+                  user.confirmation.mail.zip,
                   ',',
-                  user.confirmation.address.country,
+                  user.confirmation.mail.country,
                 ].join(' ') : ''
               }, {
                 name: 'Additional Notes',
