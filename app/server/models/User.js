@@ -177,6 +177,7 @@ var confirmation = {
   signatureCodeOfConduct: String,
   signatureLogisticsRelease: String,
   communicationRelease: Boolean,
+  friendRegistration: Boolean,
   inPerson: Boolean,
 };
 
