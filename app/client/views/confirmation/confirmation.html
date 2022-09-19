@@ -34,14 +34,14 @@
             <label>
               Age (Required)
             </label>
-            <input ng-model="user.confirmation.age"></input>
+            <input name="age" ng-model="user.confirmation.age"></input>
           </div>
 
           <div class="field">
             <label>
               Country (Required)
             </label>
-            <input ng-model="user.confirmation.country"></input>
+            <input name="country" ng-model="user.confirmation.country"></input>
           </div>
 
           <div class="field">
@@ -101,36 +101,22 @@
           <div class="field">
             <label> Mailing Address </label>
             <p>
-              If you are non-Cornell student attending the event virtually, please fill out your address so that we can mail you your swag from the event!
+              If you are a non-Cornell student attending the event virtually, please fill out your address so that we can mail you your swag from the event!
             </p>
-            <p>
-              Full Name
-            </p>
-            <input ng-model="user.confirmation.mailing.name"></input>
-            <p>
-              Address Line 1 - Street address, P.O. box, company name, c/o
-            </p>
-            <input ng-model="user.confirmation.mailing.line1"></input>
-            <p>
-              Address Line 2 - Apartment, suite, unit, building, floor, etc.
-            </p>
-            <input ng-model="user.confirmation.mailing.line2"></input>
-            <p>
-              City
-            </p>
-            <input ng-model="user.confirmation.mailing.city"></input>
-            <p>
-              State/Province/Region
-            </p>
-            <input ng-model="user.confirmation.mailing.state"></input>
-            <p>
-              ZIP / Postal Code
-            </p>
-            <input ng-model="user.confirmation.mailing.zip"></input>
-            <p>
-              Country
-            </p>
-            <input ng-model="user.confirmation.mailing.country"></input>
+            <label>Full Name</label>
+            <input name="mailingname" ng-model="user.confirmation.mailing.name"></input>
+            <label>Address Line 1 - Street address, P.O. box, company name, c/o</label>
+            <input name="mailingline1" ng-model="user.confirmation.mailing.line1"></input>
+            <label>Address Line 2 - Apartment, suite, unit, building, floor, etc.</label>
+            <input name="mailingline2" ng-model="user.confirmation.mailing.line2"></input>
+            <label>City</label>
+            <input name="mailingcity" ng-model="user.confirmation.mailing.city"></input>
+            <label>State/Province/Region</label>
+            <input name="mailingstate" ng-model="user.confirmation.mailing.state"></input>
+            <label>ZIP / Postal Code</label>
+            <input name="mailingzip" ng-model="user.confirmation.mailing.zip"></input>
+            <label>Country</label>
+            <input name="mailingcountry" ng-model="user.confirmation.mailing.country"></input>
           </div>
 <!-- 
           <div class="field">
