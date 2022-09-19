@@ -100,60 +100,6 @@ angular.module('reg')
                 }
               ]
             },
-            name: {
-              identifier: 'name',
-              rules: [
-                {
-                  type: 'empty',
-                  prompt: 'Please enter an address name.'
-                }
-              ]
-            },
-            addressLine1: {
-              identifier: 'addressLine1',
-              rules: [
-                {
-                  type: 'empty',
-                  prompt: 'Please enter an Address.'
-                }
-              ]
-            },
-            city: {
-              identifier: 'city',
-              rules: [
-                {
-                  type: 'empty',
-                  prompt: 'Please enter a city.'
-                }
-              ]
-            },
-            state: {
-              identifier: 'state',
-              rules: [
-                {
-                  type: 'empty',
-                  prompt: 'Please enter a state.'
-                }
-              ]
-            },
-            zip: {
-              identifier: 'zip',
-              rules: [
-                {
-                  type: 'empty',
-                  prompt: 'Please enter a zip/postal code.'
-                }
-              ]
-            },
-            country: {
-              identifier: 'country',
-              rules: [
-                {
-                  type: 'empty',
-                  prompt: 'Please enter a country.'
-                }
-              ]
-            },
             signatureLiability: {
               identifier: 'signatureLiabilityWaiver',
               rules: [
