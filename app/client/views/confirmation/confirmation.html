@@ -11,9 +11,9 @@
         <div class="divided title">Note On BigRed//Hacks 2022</div>
         <p>
           <strong>
-            Please note that BigRed//Hacks is a hybrid event. You will be welcome to attend the event in-person at
-            Cornell University or online. Online attendees will have access to unique workshops and experiences, as well
-            as virtual components of our in-person events.
+            Please note that BigRed//Hacks will be an in-person event for Cornell students and hybrid for non-Cornell
+            participants. BigRed//Hacks will be taking place from October 14 to 16th. Please confirm your registration
+            for BigRed//Hacks by 11:59pm on 10/7.
           </strong>
         </p>
         <br>
@@ -28,6 +28,26 @@
             </p>
             <input type="tel" name="phone" ng-model="user.confirmation.phoneNumber" placeholder="(123) - 555 - 1234"
               required>
+          </div>
+           
+          <div class="field">
+            <label>
+              Age
+            </label>
+            <p>
+              We need to collect this information for MLH.
+            </p>
+            <input ng-model="user.confirmation.age"></input>
+          </div>
+
+          <div class="field">
+            <label>
+              Country
+            </label>
+            <p>
+              We need to collect this information for MLH.
+            </p>
+            <input ng-model="user.confirmation.country"></input>
           </div>
 
           <div class="field">
@@ -144,12 +164,12 @@
           <div>
 
             <div class="ui header">
-              Mailing Address (Required)
+              Mailing Address
             </div>
 
             <p>
-              We need your address so we can send you swag from the event! Be sure to input your address even if you are
-              attending in-person, in case we need to mail you swag due to COVID restrictions.
+              If you are non-Cornell student attending the event virtually, please fill out your address
+              so that we can mail you your swag from the event!
             </p>
 
             <div class="field">
@@ -273,17 +293,27 @@
           <div class="field"
             ng-if="(user.email.split('@')[1] == 'cornell.edu') && (user.profile.school == 'Cornell University')">
             <label>
-              Will you be attending in-person? (Cornell Students Only)
+              Will you be attending in-person?
             </label>
             <div class="ui checkbox">
               <input type="checkbox" ng-model="user.confirmation.inPerson">
-              <label> Yes, I will be attending BigRed//Hacks 2021 in-person. </label>
+              <label> Yes, I will be attending BigRed//Hacks 2022 in-person. </label>
             </div>
           </div>
           <br>
           <br>
 
           <div class="divided title">everything else</div>
+
+          <div class="field">
+            <label>
+              Have you invited your friends to register for BRH too? :)
+            </label>
+            <div class="ui checkbox">
+              <input type="checkbox" ng-model="user.confirmation.friendRegistrationg">
+              <label> Yes or I'm planning to! </label>
+            </div>
+          </div>
 
           <div class="field">
             <label>
