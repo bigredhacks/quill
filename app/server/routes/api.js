@@ -185,8 +185,10 @@ module.exports = function (router) {
       'status.confirmed', 'status.declined', 'status.checkedIn',
       'status.reimbursementGiven', 'confirmation.signatureLiability',
       'confirmation.signaturePhotoRelease', 'confirmation.signatureCodeOfConduct',
-      'confirmation.signatureLogisticsRelease', 'confirmation.communicationRelease',
-      'confirmation.phoneNumber', 'confirmation.shirtSize', 'confirmation.inPerson', 'confirmation.mail', 'confirmation.discordId',
+      'confirmation.signatureLogisticsRelease', 'confirmation.communicationRelease', 'confirmation.age', 'confirmation.fromcountry',
+      'confirmation.phoneNumber', 'confirmation.shirtSize', 'confirmation.inPerson', 'confirmation.mailingname',
+      'confirmation.mailingname', 'confirmation.mailingline1', 'confirmation.mailingline2', 'confirmation.mailingcity',
+      'confirmation.mailingstate', 'confirmation.mailingzip', 'confirmation.mailingcountry',  'confirmation.discordId',
     ];
     var fs = require('fs');
 
