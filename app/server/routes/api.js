@@ -186,7 +186,7 @@ module.exports = function (router) {
       'status.reimbursementGiven', 'confirmation.signatureLiability',
       'confirmation.signaturePhotoRelease', 'confirmation.signatureCodeOfConduct',
       'confirmation.signatureLogisticsRelease', 'confirmation.communicationRelease',
-      'confirmation.phoneNumber', 'confirmation.shirtSize', 'confirmation.inPerson', 'confirmation.address', 'confirmation.discordId',
+      'confirmation.phoneNumber', 'confirmation.shirtSize', 'confirmation.friendRegistration', 'confirmation.address', 'confirmation.discordId',
     ];
     var fs = require('fs');
 
