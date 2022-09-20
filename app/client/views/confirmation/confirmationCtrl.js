@@ -31,7 +31,8 @@ angular.module('reg')
         'Halal': false,
         'Kosher': false,
         'Gluten-Free': false,
-        'Nut Allergy': false
+        'Nut Allergy': false,
+        'Other': false,
       };
 
       if (user.confirmation.dietaryRestrictions){

@@ -179,7 +179,7 @@ angular.module('reg')
         if ($('.ui.form').form('is valid')){
           _updateUser();
         } else {
-          swal("Uh oh!", "Please Fill The Required Fields", "error");
+          swal("Uh oh!", "Some of the required fields are blank, please fill them in!", "error");
         }
       };
     }]);

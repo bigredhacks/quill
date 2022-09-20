@@ -32,7 +32,7 @@
             <label> Dietary Restrictions </label>
 
             <p>
-              If your restriction is not included here, please let us know in the additional notes at the bottom.
+              If your restriction is not included here, please let us know under "Other Dietary Restrictions"
             </p>
             <p>
               We'll make sure you get fed :)
@@ -49,6 +49,12 @@
               </div>
 
             </div>
+          </div>
+
+          <div class="field">
+            <label> Other Dietary Restrictions:
+            </label>
+            <input type="text" name="otherDietaryRestrictions" ng-model="user.confirmation.otherDietaryRestrictions">
           </div>
 
           <div class="field">
@@ -200,7 +206,7 @@
             <p>
               For legal reasons, our university asks that you read and accept the terms of our liability waiver. Again,
               as we mentioned in the original application - you <strong> must </strong> be 18 years or older by the day
-              of the event, or we will refuse you admission at the door.< </p>
+              of the event, or we will refuse you admission at the door. </p>
                 <p>
                   By writing my name below, I affirm that I have read and accepted the terms of the liability waiver
                   above, and will be 18 years or older at the time of the event.
@@ -274,7 +280,7 @@
             </label>
             <div class="ui checkbox">
               <input type="checkbox" ng-model="user.confirmation.inPerson">
-              <label> Yes, I will be attending BigRed//Hacks 2021 in-person. </label>
+              <label> Yes, I will be attending BigRed//Hacks 2022 in-person. </label>
             </div>
           </div>
           <br>
