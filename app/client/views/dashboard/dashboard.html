@@ -215,6 +215,7 @@
           class="description"
           ng-if="dashState('confirmed')">
 		  <br>
+		  <h2>You are attending <span ng-if="user.confirmation.inPerson">In-Person</span><span ng-if="!user.confirmation.inPerson">Virtually</span></h2>
 
           <div
             ng-show="!pastConfirmation"
