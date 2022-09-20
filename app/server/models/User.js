@@ -179,6 +179,7 @@ var confirmation = {
   communicationRelease: Boolean,
   inPerson: Boolean,
   friendRegistration: Boolean,
+  otherDietaryRestrictions: String,
 };
 
 var status = {
