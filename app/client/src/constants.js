@@ -13,8 +13,8 @@ angular.module('reg')
         CLOSED_AND_INCOMPLETE_TITLE: 'Unfortunately, registration has closed, and the application review process has begun.',
         CLOSED_AND_INCOMPLETE: 'Because you have not completed your profile in time, you will not be eligible for admission.',
         ADMITTED_AND_CAN_CONFIRM_TITLE: 'You must confirm by Sunday, October 2nd 2022, 11:59 pm (Eastern).',
-        ADMITTED_AND_CANNOT_CONFIRM_TITLE: 'The confirmation deadline has passed.',
-        ADMITTED_AND_CANNOT_CONFIRM: 'Although you were accepted, you did not complete your confirmation in time.\nUnfortunately, this means that you will not be able to attend the event, as we must begin to accept other applicants on the waitlist.\nWe hope to see you again next year!',
+        // ADMITTED_AND_CANNOT_CONFIRM_TITLE: 'The confirmation deadline has passed.',
+        ADMITTED_AND_CANNOT_CONFIRM: 'The confirmation deadline has passed. Although you were accepted, you did not complete your confirmation in time.\nUnfortunately, this means that you will not be able to attend the event, as we must begin to accept other applicants on the waitlist.\nWe hope to see you again next year!',
         CONFIRMED_NOT_PAST_TITLE: 'You can edit your confirmation information until Sunday, October 2nd 2022, 11:59 pm (Eastern)',
         DECLINED: 'We\'re sorry to hear that you won\'t be able to make it to BigRed\/\/Hacks 2022! :(\nMaybe next year! We hope you see you again soon.',
     })
