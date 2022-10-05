@@ -20,7 +20,7 @@ var schema = new mongoose.Schema({
   },
   timeConfirm: {
     type: Number,
-    default: 604800000 // Date of confirmation
+    default: 1665201540000 // Date of confirmation
   },
   whitelistedEmails: {
     type: [String],
