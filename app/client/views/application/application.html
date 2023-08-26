@@ -7,12 +7,12 @@
     <div class="column">
       <div class="ui form" ng-class="{'loading': loading}">
 
-        <div class="divided title">Note On BigRed//Hacks 2022</div>
+        <div class="divided title">Note On BigRed//Hacks 2023</div>
         <p>
           <strong>
-            Please note that BigRed//Hacks will be an in-person event for Cornell students and hybrid for non-Cornell
-            participants. BigRed//Hacks will be taking place from October 14 to 16th. Learn more about the hackathon at
-            https://bigredhacks.com. Registration for BigRed//Hacks will close on 9/25 at 11:59pm.
+            Please note that BigRed//Hacks will be a fully in-person event this year. 
+            BigRed//Hacks will be taking place from September 22nd to 24th. Learn more about the hackathon at
+            https://bigredhacks.com. Registration for BigRed//Hacks will close on 9/12 at 11:59pm!
           </strong>
         </p>
         <br>
@@ -74,14 +74,20 @@
           </div>
 
           <div class="field">
+            <label> Minor (Optional) </label>
+            <input type="text" name="minor" placeholder="Computer Science, Product Design, Basket Weaving, etc."
+              ng-model="user.profile.major">
+          </div>
+
+          <div class="field">
             <label>Graduation Year</label>
             <select name="year" ng-model="user.profile.graduationYear">
               <option value="">Graduation Year</option>
-              <option value="2022">2022</option>
               <option value="2023">2023</option>
               <option value="2024">2024</option>
               <option value="2025">2025</option>
               <option value="2026">2026</option>
+              <option value="2027">2027</option>
               <option value="Other">Other</option>
             </select>
           </div>
@@ -170,7 +176,7 @@
             <label> Resume (Required) </label>
             <p>
               Please upload your resume to our resume Dropbox. PDF preferred! Your resume will be shared with our
-              sponsors if you confirm your spot at BigRed//Hacks 2022.
+              sponsors if you confirm your spot at BigRed//Hacks 2023.
             </p>
             <a target="_blank" href="https://www.dropbox.com/request/oXXKRpKukIJM0WCEBuHv" class="ui pink button">
               Upload
@@ -226,7 +232,7 @@
 
           <div class="field" ng-hide="isMitStudent">
             <p>
-              Checking the box below affirms that you are or will be 18 years or older by October 14th, 2022.
+              Checking the box below affirms that you are or will be 18 years or older by September 22nd, 2023.
             </p>
             <p>
               <strong>
