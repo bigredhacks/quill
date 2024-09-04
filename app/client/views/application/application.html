@@ -18,7 +18,8 @@
         <br>
         <div class="divided title">Basic Information</div>
 
-        <fieldset ng-disabled="regIsClosed">
+        <form>
+          <fieldset ng-disabled="regIsClosed">
 
           <div class="field">
             <label> Email </label>
@@ -27,12 +28,12 @@
 
           <div class="field">
             <label> Full Name </label>
-            <input type="text" name="name" ng-model="user.profile.name">
+            <input type="text" name="name" ng-model="user.profile.name" required>
           </div>
 
           <div class="field">
             <label> NetID (Non-Cornell students please put N/A) </label>
-            <input type="text" name="netid" ng-model="user.profile.netid">
+            <input type="text" name="netid" ng-model="user.profile.netid" required>
           </div>
 
           <div class="field" ng-show="autoFilledSchool">
@@ -44,7 +45,7 @@
             <label> University </label>
             <div id="school" class="ui search">
               <div class="ui input">
-                <input class="prompt" type="text" name="school" ng-model="user.profile.school">
+                <input class="prompt" type="text" name="school" ng-model="user.profile.school" required>
               </div>
               <div class="results"></div>
             </div>
@@ -52,7 +53,7 @@
 
           <div class="field">
             <label> College (Non-Cornell students please choose N/A) </label>
-            <select name="subcollege" ng-model="user.profile.subcollege">
+            <select name="subcollege" ng-model="user.profile.subcollege" required>
               <option value="">College</option>
               <option value="E">Engineering</option>
               <option value="CAS">Arts and Sciences</option>
@@ -81,7 +82,7 @@
 
           <div class="field">
             <label>Graduation Year</label>
-            <select name="year" ng-model="user.profile.graduationYear">
+            <select name="year" ng-model="user.profile.graduationYear" required>
               <option value="">Graduation Year</option>
               <option value="2023">2023</option>
               <option value="2024">2024</option>
@@ -94,7 +95,7 @@
 
           <div class="field">
             <label>I'm pursuing a</label>
-            <select name="degree" ng-model="user.profile.degreeType">
+            <select name="degree" ng-model="user.profile.degreeType" required>
               <option value="">Degree Type</option>
               <option value="UG">Undergraduate degree</option>
               <option value="M">Master's degree</option>
@@ -110,7 +111,7 @@
 
           <div class="field">
             <label>Gender </label>
-            <select name="gender" ng-model="user.profile.gender">
+            <select name="gender" ng-model="user.profile.gender" required>
               <option value="">Gender</option>
               <option value="M">Male</option>
               <option value="F">Female</option>
@@ -127,7 +128,7 @@
 
           <div class="field">
             <label>Race/Ethnicity</label>
-            <select name="raceOrEthnicity" ng-model="user.profile.raceOrEthnicity">
+            <select name="raceOrEthnicity" ng-model="user.profile.raceOrEthnicity" required>
               <option value="">Race/Ethnicity</option>
               <option value="AI/AN">American Indian/Alaska Native</option>
               <option value="A">Asian</option>
@@ -196,7 +197,7 @@
 
           <div class="field">
             <label>Years of programming experience</label>
-            <select name="experience" ng-model="user.profile.experience">
+            <select name="experience" ng-model="user.profile.experience" required>
               <option value="">Number of years</option>
               <option value="under1">Under 1</option>
               <option value="1to3">1 to 3</option>
@@ -215,7 +216,7 @@
 
           <div class="field">
             <label>How did you hear about BigRed//Hacks?</label>
-            <select name="source" ng-model="user.profile.source">
+            <select name="source" ng-model="user.profile.source" required>
               <option value="">Source</option>
               <option value="email">Email Listserv</option>
               <option value="class">Professor/Class</option>
@@ -252,8 +253,8 @@
               Submit
             </button>
           </div>
-
         </fieldset>
+        </form>
       </div>
     </div>
   </div>

@@ -176,7 +176,9 @@ angular.module('reg')
       }
 
       $scope.submitForm = function(){
-        if ($('.ui.form').form('is valid')){
+        var formElement = document.querySelector('.ui.form form');
+
+        if (formElement.checkValidity() && $('.ui.form').form('is valid')){
           _updateUser();
         } else {
           swal("Uh oh!", "Some of the fields are blank, please fill them in!", "error");
