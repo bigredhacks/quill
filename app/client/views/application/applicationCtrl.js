@@ -117,12 +117,30 @@ angular.module('reg')
                 }
               ]
             },
+            netid: {
+              identifier: 'netid',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter your netid.'
+                }
+              ]
+            },
             school: {
               identifier: 'school',
               rules: [
                 {
                   type: 'empty',
                   prompt: 'Please enter your school name.'
+                }
+              ]
+            },
+            subcollege: {
+              identifier: 'subcollege',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please select your college.'
                 }
               ]
             },
@@ -162,6 +180,43 @@ angular.module('reg')
                 }
               ]
             },
+      degree: {
+        identifier: 'degree',
+        rules: [
+          {
+            type: 'empty',
+            prompt: 'Please select a degree type.'
+          }
+        ]
+
+      },
+      raceOrEthnicity: {
+        identifier: 'raceOrEthnicity',
+        rules: [
+          {
+            type: 'empty',
+            prompt: 'Please select a race/ethnicity or select \'prefer not to answer\'.'
+          }
+        ]
+      },
+      experience: {
+        identifier: 'experience',
+        rules: [
+          {
+            type: 'empty',
+            prompt: 'Please select your years of programming experience'
+          }
+        ]
+      },
+      source: {
+        identifier: 'source',
+        rules: [
+          {
+            type: 'empty',
+            prompt: 'Please enter how you heard about BigRed//Hacks'
+          }
+        ]
+      },
 			essay: {
               identifier: 'essay',
               rules: [
@@ -176,9 +231,8 @@ angular.module('reg')
       }
 
       $scope.submitForm = function(){
-        var formElement = document.querySelector('.ui.form form');
 
-        if (formElement.checkValidity() && $('.ui.form').form('is valid')){
+        if ($('.ui.form').form('is valid')){
           _updateUser();
         } else {
           swal("Uh oh!", "Some of the fields are blank, please fill them in!", "error");

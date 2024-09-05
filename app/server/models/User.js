@@ -34,7 +34,7 @@ var profile = {
   graduationYear: {
     type: String,
     enum: {
-      values: '2023 2024 2025 2026 2027 Other'.split(' '),
+      values: '2024 2025 2026 2027 2028 Other'.split(' '),
     }
   },
 
@@ -422,7 +422,7 @@ schema.statics.validateProfile = function (profile, cb) {
     profile.adult &&
     profile.netid.length > 0 &&
     profile.school.length > 0 &&
-    ['2023', '2024', '2025', '2026', '2027', 'Other'].indexOf(profile.graduationYear) > -1 &&
+    ['2024', '2025', '2026', '2027', '2028', 'Other'].indexOf(profile.graduationYear) > -1 &&
     ['E', 'CAS', 'HE', 'CALS', 'Hotel', 'AAP', 'ILR', 'D', 'O', 'N/A'].indexOf(profile.subcollege) > -1 &&
     ['M', 'F', 'Nonbinary', 'O', 'N'].indexOf(profile.gender) > -1 &&
     ['H/L', 'C', 'B/AA', 'NH/PI', 'A', 'AI/AN', 'T', 'O', 'N'].indexOf(profile.raceOrEthnicity) > -1 &&
