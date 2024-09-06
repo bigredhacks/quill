@@ -51,7 +51,6 @@
         }
     },
     "addons": [
-        "mongolab"
     ],
     "keywords": ["quill", "node", "express", "mongo"]
 }
