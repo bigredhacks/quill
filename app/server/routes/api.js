@@ -186,9 +186,9 @@ module.exports = function (router) {
       'status.reimbursementGiven', 'confirmation.signatureLiability',
       'confirmation.signaturePhotoRelease', 'confirmation.signatureCodeOfConduct',
       'confirmation.signatureLogisticsRelease', 'confirmation.communicationRelease', 'confirmation.friendRegistration', 'confirmation.age', 'confirmation.fromcountry',
-      'confirmation.phoneNumber', 'confirmation.shirtSize', 'confirmation.inPerson', 'confirmation.mailingname', 'confirmation.mailingline1', 
+      'confirmation.phoneNumber', 'confirmation.shirtSize', 'confirmation.inPerson', 'confirmation.mailingname', 'confirmation.mailingline1',
       'confirmation.mailingline2', 'confirmation.mailingcity',
-      'confirmation.mailingstate', 'confirmation.mailingzip', 'confirmation.mailingcountry',  'confirmation.discordId', 'confirmation.otherDietaryRestrictions'
+      'confirmation.mailingstate', 'confirmation.mailingzip', 'confirmation.mailingcountry', 'confirmation.discordId', 'confirmation.otherDietaryRestrictions'
     ];
     var fs = require('fs');
 
@@ -331,7 +331,14 @@ module.exports = function (router) {
     // Accept the hacker. Admin only
     var id = req.params.id;
     var user = req.user;
-    UserController.admitUser(id, user, defaultResponse(req, res));
+    UserController.admitUser(id, user, function (err) {
+      if (err) {
+        return res.status(400).send(err);
+      }
+      return res.json({
+        message: 'Email Sent'
+      });
+    });
   });
 
   /**
